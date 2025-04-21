@@ -21,13 +21,12 @@
       margin: 0 auto;
     }
 
-    img {
-      width: 1145px;
-      height: 675px;
-      border: 1px solid #ccc;
-      margin-top: 20px;
-      display: block;
-    }
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
   </style>
 </head>
 <body>
@@ -35,7 +34,7 @@
   <p>Clique nos pontos numerados do mapa para explorar os arredores.</p>
 
   <div class="mapa-container">
-    <img src="mapa.png" usemap="#mapaSitio" alt="Mapa interativo do Sítio Gazeta com arredores e legendas" width="1145" height="675" />
+   <img src="mapa.png" usemap="#mapaSitio" alt="Mapa interativo do Sítio Gazeta com arredores e legendas">
     <map name="mapaSitio">
       <area shape="circle" coords="352,379,15" href="https://example.com/1" alt="Sítio Gazeta" title="1. Sítio Gazeta" />
       <area shape="circle" coords="703,622,15" href="https://example.com/2" alt="UNASP-EC" title="2. UNASP-EC" />
