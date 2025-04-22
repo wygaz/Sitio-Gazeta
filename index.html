@@ -1,84 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sítio Gazeta - Mapa com Legenda</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sítio Gazeta - Oportunidade Única!</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #2C3E50;
+      color: white;
       padding: 40px 20px;
+      text-align: center;
     }
-
-    h1 {
-      color: #2c3e50;
-      margin-bottom: 20px;
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-
-    .mapa {
+    h2 {
+      color: #2C3E50;
+    }
+    .highlight {
+      font-size: 20px;
+      font-weight: bold;
+      color: #27AE60;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 15px 25px;
+      background-color: #FFD700;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    iframe, img {
+      width: 100%;
       max-width: 100%;
       height: auto;
-      border: 1px solid #ccc;
-      margin-bottom: 30px;
+      border-radius: 8px;
+      margin-top: 20px;
     }
-
-    .legenda {
+    .two-columns {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.2em;
-      line-height: 0.7;
-      text-align: left;
+      font-size: 1.1em;
     }
-
-    .coluna {
+    .two-columns ul {
       flex: 1;
-      min-width: 280px;
-    }
-
-    ul {
       list-style: none;
       padding: 0;
-      margin: 0;
     }
-
-    li {
-      margin-bottom: 12px;
+    .legend-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      font-size: 1.2em;
+      justify-content: center;
+    }
+    .legend-container ul {
+      list-style: none;
+      padding: 0;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>🏡 Oportunidade Única ao Lado do UNASP-EC</h1>
+    <p class="highlight">Terreno com 27.833 m² – R$ 32/m²</p>
+  </header>
 
-  <h1>📍 Mapa do Sítio Gazeta e Região</h1>
-  <img src="mapa.png" alt="Mapa ilustrativo do Sítio Gazeta" class="mapa" />
-
-  <div class="legenda">
-    <div class="coluna">
+  <section>
+    <h2>📍 Localização Privilegiada</h2>
+    <p>A 800 metros do UNASP-EC, ao lado da Cidade Universitária, com acesso totalmente asfaltado.</p>
+    <img src="mapa.png" alt="Mapa com arredores e legendas">
+    <div class="legend-container">
       <ul>
-        <li><strong>1.</strong> Sítio Gazeta</li>
-        <li><strong>2.</strong> UNASP-EC</li>
-        <li><strong>3.</strong> Recanto Tropical</li>
-        <li><strong>4.</strong> Cidade Universitária</li>
-        <li><strong>5.</strong> Lagoa Bonita I</li>
-        <li><strong>6.</strong> Sparta Park</li>
+        <li>1. Sítio Gazeta</li>
+        <li>2. UNASP-EC</li>
+        <li>3. Recanto Tropical</li>
+        <li>4. Cidade Universitária</li>
+        <li>5. Lagoa Bonita I</li>
+        <li>6. Sparta Park</li>
+      </ul>
+      <ul>
+        <li>7. CEVISA</li>
+        <li>8. Portal do Lago</li>
+        <li>9. Lago Azul</li>
+        <li>10. Recanto dos Pássaros</li>
+        <li>11. Engenheiro Coelho</li>
+        <li>12. Jacarandá</li>
       </ul>
     </div>
-    <div class="coluna">
+  </section>
+
+  <section>
+    <h2>🎥 Conheça o UNASP</h2>
+    <iframe src="https://www.youtube.com/embed/H9aC4LuC2xo" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>💰 Investimento Estratégico</h2>
+    <p class="highlight">R$ 890.685,00 por 27.833 m²</p>
+    <p>Excelente oportunidade por se tratar de divisão de herança. Valor abaixo da média regional.</p>
+    <p>Ideal para construir uma residência ampla, reservar parte para valorização ou empreender com moradia estudantil.</p>
+    <img src="tabela_comparativa.png" alt="Tabela comparativa de preços por m² na região">
+  </section>
+
+  <section>
+    <h2>🌿 Natureza e Qualidade de Vida</h2>
+    <p>Contato direto com a natureza, espaço arborizado e ideal para vida tranquila ou projetos sustentáveis.</p>
+    <img src="Sitio_Gazeta_01.png" alt="Vista aérea do sítio">
+  </section>
+
+  <section>
+    <h2>🛋️ Potenciais de Uso</h2>
+    <div class="two-columns">
       <ul>
-        <li><strong>7.</strong> CEVISA</li>
-        <li><strong>8.</strong> Portal do Lago</li>
-        <li><strong>9.</strong> Lago Azul</li>
-        <li><strong>10.</strong> Recanto dos Pássaros</li>
-        <li><strong>11.</strong> Engenheiro Coelho (Urbano)</li>
-        <li><strong>12.</strong> Jacarandá</li>
+        <li>🏠 Residência familiar</li>
+        <li>🏘️ Loteamento ou condomínio</li>
+      </ul>
+      <ul>
+        <li>🏢 Apartamentos para estudantes</li>
+        <li>🌿 Espaço para eventos, retiros ou ecoturismo</li>
       </ul>
     </div>
-  </div>
+  </section>
 
+  <section>
+    <h2>📍 Veja no Mapa</h2>
+    <a class="cta-button" href="https://goo.gl/maps/RbM6oFmCPw3aD8Nc6" target="_blank">📍 Ver Localização no Google Maps</a>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2875.1579574429174!2d-47.155694399999994!3d-22.491194399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDI5JzI4LjMiUyA0N8KwMDknMjAuNSJX!5e1!3m2!1spt-BR!2sbr!4v1739985019370!5m2!1spt-BR!2sbr" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <section>
+    <h2>📞 Entre em Contato</h2>
+    <a class="cta-button" href="https://wa.me/5519999350101?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20terreno!" target="_blank">💬 Fale agora no WhatsApp</a>
+    <p><strong>Email:</strong> wygazeta@gmail.com</p>
+  </section>
 </body>
 </html>
