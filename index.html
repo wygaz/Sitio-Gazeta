@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mapa Interativo do Sítio Gazeta</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa do Sítio Gazeta</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     h1 {
       color: #2c3e50;
-      margin-bottom: 10px;
     }
 
     p {
       color: #444;
-      margin-top: 0;
+      margin-bottom: 20px;
     }
 
     .mapa-container {
-      max-width: 100%;
+      max-width: 1145px;
       margin: 0 auto;
     }
 
@@ -31,37 +30,43 @@
       max-width: 100%;
       height: auto;
       border: 1px solid #ccc;
-      margin-top: 20px;
+    }
+
+    .legenda {
+      text-align: left;
+      max-width: 1145px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <h1>📍 Mapa Interativo do Sítio Gazeta</h1>
-  <p>Clique nos pontos numerados do mapa para explorar os arredores.</p>
+  <h1>📍 Mapa do Sítio Gazeta</h1>
+  <p>Confira abaixo a localização dos principais pontos da região.</p>
 
   <div class="mapa-container">
-    <img src="mapa.png" usemap="#mapaSitio" alt="Mapa interativo com pontos de interesse">
-    <map name="mapaSitio">
-      <area shape="circle" coords="352,379,15" href="https://example.com/1" alt="Sítio Gazeta" title="1. Sítio Gazeta" />
-      <area shape="circle" coords="703,622,15" href="https://example.com/2" alt="UNASP-EC" title="2. UNASP-EC" />
-      <area shape="circle" coords="762,449,15" href="https://example.com/3" alt="Recanto Tropical" title="3. Recanto Tropical" />
-      <area shape="circle" coords="813,386,15" href="https://example.com/4" alt="Cidade Universitária" title="4. Cidade Universitária" />
-      <area shape="circle" coords="633,362,15" href="https://example.com/5" alt="Lagoa Bonita I" title="5. Lagoa Bonita I" />
-      <area shape="circle" coords="577,452,15" href="https://example.com/6" alt="Sparta Park" title="6. Sparta Park" />
-      <area shape="circle" coords="620,597,15" href="https://example.com/7" alt="CEVISA" title="7. CEVISA" />
-      <area shape="circle" coords="677,540,15" href="https://example.com/8" alt="Portal do Lago" title="8. Portal do Lago" />
-      <area shape="circle" coords="542,382,15" href="https://example.com/9" alt="Lago Azul" title="9. Lago Azul" />
-      <area shape="circle" coords="560,482,15" href="https://example.com/10" alt="Recanto dos Pássaros" title="10. Recanto dos Pássaros" />
-      <area shape="circle" coords="270,288,15" href="https://example.com/11" alt="Engenheiro Coelho" title="11. Engenheiro Coelho" />
-      <area shape="circle" coords="862,135,15" href="https://example.com/12" alt="Jacarandá" title="12. Jacarandá" />
-    </map>
+    <img src="mapa.png" alt="Mapa do Sítio Gazeta com numeração e legenda">
   </div>
 
-  <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
-  <script>
-    window.onload = function () {
-      imageMapResize();
-    };
-  </script>
+  <div class="legenda">
+    <ol>
+      <li>Sítio Gazeta</li>
+      <li>UNASP-EC – Universidade Adventista de São Paulo</li>
+      <li>Recanto Tropical</li>
+      <li>Bairro Cidade Universitária</li>
+      <li>Residencial Lagoa Bonita I</li>
+      <li>Residencial Sparta Park</li>
+      <li>CEVISA – Centro de Vida Saudável</li>
+      <li>Residencial Portal do Lago (Resid. Lagoa Bonita II)</li>
+      <li>Residencial Lago Azul</li>
+      <li>Residencial Recanto dos Pássaros (Resid. Lagoa Bonita III)</li>
+      <li>Área Urbana da cidade de Engenheiro Coelho</li>
+      <li>Jacarandá</li>
+    </ol>
+  </div>
 </body>
 </html>
