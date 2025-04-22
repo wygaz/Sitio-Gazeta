@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa do Sítio Gazeta</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sítio Gazeta - Mapa de Localização</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      text-align: center;
+      background-color: #f5f5f5;
+      margin: 0;
       padding: 40px 20px;
+      text-align: center;
+      color: #333;
     }
 
     h1 {
+      font-size: 2em;
       color: #2c3e50;
+      margin-bottom: 10px;
     }
 
     p {
-      color: #444;
-      margin-bottom: 20px;
+      font-size: 1.1em;
+      margin-bottom: 30px;
     }
 
     .mapa-container {
@@ -26,47 +30,58 @@
       margin: 0 auto;
     }
 
-    img {
-      max-width: 100%;
+    .mapa-container img {
+      width: 100%;
       height: auto;
       border: 1px solid #ccc;
     }
 
     .legenda {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+
+    .legenda ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       text-align: left;
-      max-width: 1145px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 10px;
-      border: 1px solid #ddd;
-      font-size: 16px;
-      line-height: 1.6;
+    }
+
+    .legenda li {
+      margin: 4px 0;
     }
   </style>
 </head>
 <body>
-  <h1>📍 Mapa do Sítio Gazeta</h1>
-  <p>Confira abaixo a localização dos principais pontos da região.</p>
+  <h1>📍 Mapa de Localização do Sítio Gazeta</h1>
+  <p>Visualize os principais bairros e pontos de interesse ao redor do Sítio Gazeta.</p>
 
   <div class="mapa-container">
-    <img src="mapa.png" alt="Mapa do Sítio Gazeta com numeração e legenda">
-  </div>
-
-  <div class="legenda">
-    <ol>
-      <li>Sítio Gazeta</li>
-      <li>UNASP-EC – Universidade Adventista de São Paulo</li>
-      <li>Recanto Tropical</li>
-      <li>Bairro Cidade Universitária</li>
-      <li>Residencial Lagoa Bonita I</li>
-      <li>Residencial Sparta Park</li>
-      <li>CEVISA – Centro de Vida Saudável</li>
-      <li>Residencial Portal do Lago (Resid. Lagoa Bonita II)</li>
-      <li>Residencial Lago Azul</li>
-      <li>Residencial Recanto dos Pássaros (Resid. Lagoa Bonita III)</li>
-      <li>Área Urbana da cidade de Engenheiro Coelho</li>
-      <li>Jacarandá</li>
-    </ol>
+    <img src="mapa.png" alt="Mapa com pontos destacados numericamente" />
+    
+    <div class="legenda">
+      <ul>
+        <li>1. Sítio Gazeta</li>
+        <li>2. UNASP-EC – Universidade Adventista de SP</li>
+        <li>3. Recanto Tropical</li>
+        <li>4. Bairro Cidade Universitária</li>
+        <li>5. Residencial Lagoa Bonita I</li>
+        <li>6. Residencial Sparta Park</li>
+      </ul>
+      <ul>
+        <li>7. CEVISA – Centro de Vida Saudável</li>
+        <li>8. Residencial Portal do Lago (Lagoa Bonita II)</li>
+        <li>9. Residencial Lago Azul</li>
+        <li>10. Recanto dos Pássaros (Lagoa Bonita III)</li>
+        <li>11. Área urbana de Engenheiro Coelho</li>
+        <li>12. Jacarandá</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
