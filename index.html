@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sítio Gazeta - Oportunidade Única</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
       text-align: center;
     }
     header {
-      background-color: #2C3E50;
+      background-color: #2c3e50;
       color: white;
       padding: 40px 20px;
       font-size: 28px;
@@ -22,105 +22,111 @@
       background-color: white;
       padding: 40px 20px;
       margin: 20px auto;
-      max-width: 900px;
+      max-width: 1000px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #2C3E50;
+      color: #2c3e50;
     }
     .highlight {
       color: green;
       font-weight: bold;
       font-size: 20px;
     }
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ffd700;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,215,0,0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(255,215,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,215,0,0); }
+    }
+    iframe, img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
     .legenda {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.1em;
+      gap: 60px;
+      font-size: 1.2em;
+      margin-top: 20px;
       text-align: left;
-      line-height: 1.4em;
     }
-    .legenda ul {
-      list-style: none;
-      padding: 0;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      margin-top: 20px;
-    }
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      margin-top: 20px;
+    .legenda-coluna {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    🏡 Oportunidade Única! Sítio Gazeta ao Lado do UNASP-EC 🌿
+    🏡 Oportunidade Única ao Lado do UNASP-EC
   </header>
 
   <div class="section">
     <h2>📍 Localização Privilegiada</h2>
-    <p class="highlight">27.833 m² ao lado do UNASP – Engenheiro Coelho</p>
-    <p>Apenas 800 metros do campus, com acesso asfaltado.<br>
-       200 metros do Bairro Cidade Universitária e 500 metros do Residencial Lagoa Bonita.</p>
-    <img src="mapa.png" alt="Mapa do Sítio Gazeta e arredores">
-
+    <p class="highlight">27.833 m² com preço especial</p>
+    <p>A 800 metros do UNASP-EC, com acesso asfaltado. Ao lado da Cidade Universitária.</p>
+    <img src="mapa.png" alt="Mapa com localização do Sítio Gazeta">
     <div class="legenda">
-      <ul>
-        <li><strong>1.</strong> Sítio Gazeta</li>
-        <li><strong>2.</strong> UNASP-EC - Universidade Adventista de São Paulo</li>
-        <li><strong>3.</strong> Recanto Tropical</li>
-        <li><strong>4.</strong> Bairro Cidade Universitária</li>
-        <li><strong>5.</strong> Residencial Lagoa Bonita I</li>
-        <li><strong>6.</strong> Residencial Sparta Park</li>
-      </ul>
-      <ul>
-        <li><strong>7.</strong> CEVISA - Centro de Vida Saudável</li>
-        <li><strong>8.</strong> Residencial Portal do Lago – Lagoa Bonita II</li>
-        <li><strong>9.</strong> Residencial Lago Azul</li>
-        <li><strong>10.</strong> Residencial Recanto dos Pássaros – Lagoa Bonita III</li>
-        <li><strong>11.</strong> Área Urbana de Engenheiro Coelho</li>
-        <li><strong>12.</strong> Jacarandá</li>
-      </ul>
+      <div class="legenda-coluna">
+        <div>1. Sítio Gazeta</div>
+        <div>2. UNASP-EC</div>
+        <div>3. Recanto Tropical</div>
+        <div>4. Cidade Universitária</div>
+        <div>5. Lagoa Bonita I</div>
+        <div>6. Sparta Park</div>
+      </div>
+      <div class="legenda-coluna">
+        <div>7. CEVISA</div>
+        <div>8. Portal do Lago</div>
+        <div>9. Lago Azul</div>
+        <div>10. Recanto dos Pássaros</div>
+        <div>11. Engenheiro Coelho</div>
+        <div>12. Jacarandá</div>
+      </div>
     </div>
-  </div>
-
-  <div class="section">
-    <h2>🎥 Conheça o UNASP</h2>
-    <iframe src="https://www.youtube.com/embed/H9aC4LuC2xo" allowfullscreen></iframe>
   </div>
 
   <div class="section">
     <h2>💰 Investimento Estratégico</h2>
     <p class="highlight">R$ 32/m² – Total: R$ 890.685,00</p>
-    <p>Oportunidade rara devido à divisão de herança. Ideal para moradia ampla, construção de residenciais ou reserva de capital com alto rendimento.</p>
-    <img src="Sitio_Gazeta_quadro_comparativo_precos.png" alt="Tabela comparativa de preços por m² na região">
+    <p>Ideal para moradia ou investimento, com alto potencial de valorização. Opção única devido à divisão de herança.</p>
   </div>
 
   <div class="section">
-    <h2>🌳 Ambiente Natural</h2>
-    <p>Contato direto com a natureza e tranquilidade para projetos residenciais ou ecológicos.</p>
-    <img src="Sitio_Gazeta_4.png" alt="Vista da área arborizada do Sítio Gazeta">
+    <h2>📊 Tabela Comparativa</h2>
+    <img src="Sitio_Gazeta_quadro_comparativo_precos.png" alt="Tabela comparativa dos preços dos terrenos vizinhos">
   </div>
 
   <div class="section">
-    <h2>🧭 Proximidade Estratégica</h2>
-    <p>Confira a posição privilegiada do Sítio Gazeta em relação ao UNASP e aos bairros adjacentes.</p>
-    <img src="Sitio_Gazeta_nivel_0.png" alt="Mapa do Sítio Gazeta nível 0">
-    <img src="Sitio_Gazeta_UNASP_EC_1.png" alt="Vista aérea do UNASP próximo ao Sítio Gazeta">
-    <img src="Sitio_Gazeta_X_Cidade_Universitaria_Unasp_EC.png" alt="Comparativo entre Cidade Universitária e UNASP">
-    <img src="Sitio_Gazeta_Zoom_0.png" alt="Zoom detalhado da localização do Sítio Gazeta">
+    <h2>🌿 Contato com a Natureza</h2>
+    <p>Ambiente tranquilo, arborizado e ideal para qualidade de vida e bem-estar.</p>
+    <img src="Sitio_Gazeta_4.png" alt="Vista natural do sítio">
   </div>
+
+  <div class="section">
+    <h2>🏫 Proximidade com o UNASP-EC</h2>
+    <p>Apenas 800 metros da universidade. Perfeito para projetos residenciais e estudantis.</p>
+    <img src="Sitio_Gazeta_UNASP_EC_1.png" alt="Vista do UNASP-EC">
+    <img src="Sitio_Gazeta_X_Cidade_Universitaria_Unasp_EC.png" alt="Relação com Cidade Universitária e UNASP">
+    <img src="Sitio_Gazeta_nivel_0.png" alt="Vista em nível do terreno">
+    <img src="Sitio_Gazeta_Zoom_0.png" alt="Vista aérea aproximada do sítio">
+  </div>
+
 </body>
 </html>
