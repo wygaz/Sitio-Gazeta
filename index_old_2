@@ -56,13 +56,11 @@
       padding: 4rem 2rem;
       max-width: 960px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    section.reveal {
       opacity: 1;
       transform: none;
+    }
+    section.reveal {
+      /* Removido temporariamente */
     }
     h1, h2 {
       color: #1b4332;
@@ -111,7 +109,25 @@
         margin: 0.5rem 0;
       }
     }
-  </style>
+    .glide__bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  .glide__bullet:hover,
+  .glide__bullet:focus {
+    background: #40916c;
+  }
+  .glide__bullet.glide__bullet--active {
+    background: #2d6a4f;
+  }
+</style>
 </head>
 <body>
   <header>
@@ -159,17 +175,40 @@
 
   <section id="galeria">
     <h2>Galeria de Fotos</h2>
-    <div class="glide">
+    <div class="glide" style="position: relative;">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li class="glide__slide"><img src="imagens/sitio1.jpg" loading="lazy" alt="Vista aérea do sítio"></li>
-          <li class="glide__slide"><img src="imagens/sitio2.jpg" loading="lazy" alt="Vegetação"></li>
-          <li class="glide__slide"><img src="imagens/sitio3.jpg" loading="lazy" alt="Trilha interna"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_X_Cidade_Universitaria_Unasp_EC.png" loading="lazy" alt="Vista aérea do sítio"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Vegetacao_1.png" loading="lazy" alt="Vegetação"></li>
+          <li class="glide__slide"><img src="imagens/sitio_Gazeta_Proximidades_1.jpg" loading="lazy" alt="Proximidades"></li>
+          <li class="glide__slide"><img src="imagens/Vista_Unasp_e_Vizinhanca_1.jpg" loading="lazy" alt="Vizinhança"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_2.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_1.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_2.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_1.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_arredores_e_legendas.png" loading="lazy" alt="Arredores do Sitio Gazeta com legenda"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Acesso_asfaltado_3.jpg" loading="lazy" alt="Acesso ao Sitio Gazeta asfaltado"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_2.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
         </ul>
       </div>
       <div data-glide-el="controls">
-        <button data-glide-dir="<">«</button>
-        <button data-glide-dir=">">»</button>
+  <div style="display: flex; justify-content: space-between; position: absolute; top: 50%; width: 100%; transform: translateY(-50%);">
+    <button data-glide-dir="<" style="background: #40916c; color: white; border: none; padding: 0.5rem 1rem; font-size: 1.2rem; border-radius: 50%; margin-left: 0.5rem; cursor: pointer;">«</button>
+    <button data-glide-dir=">" style="background: #40916c; color: white; border: none; padding: 0.5rem 1rem; font-size: 1.2rem; border-radius: 50%; margin-right: 0.5rem; cursor: pointer;">»</button>
+  </div>
+</div>
+      <div class="glide__bullets" data-glide-el="controls[nav]" style="text-align:center; margin-top: 1rem;">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+        <button class="glide__bullet" data-glide-dir="=4"></button>
+        <button class="glide__bullet" data-glide-dir="=5"></button>
+        <button class="glide__bullet" data-glide-dir="=6"></button>
+        <button class="glide__bullet" data-glide-dir="=7"></button>
+        <button class="glide__bullet" data-glide-dir="=8"></button>
+        <button class="glide__bullet" data-glide-dir="=9"></button>
+        <button class="glide__bullet" data-glide-dir="=10"></button>
       </div>
     </div>
   </section>

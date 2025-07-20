@@ -1,151 +1,133 @@
+# Gerar o arquivo index.html atualizado conforme pedido do usuário
+# Com galeria carrossel, Lightbox e nomes de imagens corrigidos para .jpg
+# Usando imagens Sitio_1.jpg até Sitio_8.jpg dentro do diretório 'imagens'
+
+index_html_content = """
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sítio Gazeta - Oportunidade Única!</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #2C3E50;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #2C3E50;
-    }
-    .highlight {
-      font-size: 20px;
-      font-weight: bold;
-      color: #17c05d;
-    }
-    .cta-button {
-      display: inline-block;
-      padding: 15px 25px;
-      background-color: #FFD700;
-      color: #000;
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-    iframe, img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      font-size: 1.1em;
-    }
-    .two-columns ul {
-      flex: 1;
-      list-style: none;
-      padding: 0;
-    }
-    .legend-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      font-size: 1.2em;
-      justify-content: center;
-    }
-    .legend-container ul {
-      list-style: none;
-      padding: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sítio Gazeta - Oportunidade Única</title>
+
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 10px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .galeria-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 12px;
+            padding: 10px;
+            margin: 20px 0;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+        .galeria-scroll a {
+            flex: 0 0 auto;
+        }
+        .galeria-scroll a img {
+            height: 160px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .galeria-scroll a img:hover {
+            transform: scale(1.05);
+        }
+        section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            padding: 20px 0;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>🏡 Oportunidade Única ao Lado do UNASP-EC</h1>
-    <p class="highlight">Terreno com 27.833 m² – R$ 32/m²</p>
-  </header>
+    <h1>Sítio Gazeta</h1>
 
-  <section>
-    <h2>📍 Localização Privilegiada</h2>
-    <p>A 800 metros do UNASP-EC, ao lado da Cidade Universitária, com acesso totalmente asfaltado.</p>
-    <img src="mapa.png" alt="Mapa com arredores e legendas">
-    <div class="legend-container">
-      <ul>
-        <li>1. Sítio Gazeta</li>
-        <li>2. UNASP-EC</li>
-        <li>3. Recanto Tropical</li>
-        <li>4. Cidade Universitária</li>
-        <li>5. Lagoa Bonita I</li>
-        <li>6. Sparta Park</li>
-      </ul>
-      <ul>
-        <li>7. CEVISA</li>
-        <li>8. Portal do Lago</li>
-        <li>9. Lago Azul</li>
-        <li>10. Recanto dos Pássaros</li>
-        <li>11. Engenheiro Coelho</li>
-        <li>12. Jacarandá</li>
-      </ul>
-    </div>
-  </section>
+    <section>
+        <h2>Localização</h2>
+        <p>Confira a localização privilegiada do Sítio Gazeta, próximo ao UNASP-EC.</p>
+    </section>
 
-  <section>
-    <h2>🎥 Conheça o UNASP</h2>
-    <iframe src="https://www.youtube.com/embed/H9aC4LuC2xo" allowfullscreen></iframe>
-  </section>
+    <section>
+        <h2>Galeria de Fotos</h2>
+        <div class="galeria-scroll">
+            <a href="imagens/Sitio_1.jpg" data-lightbox="galeria" data-title="Vista aérea do sítio">
+                <img src="imagens/Sitio_1.jpg" alt="Foto 1">
+            </a>
+            <a href="imagens/Sitio_2.jpg" data-lightbox="galeria" data-title="Entrada principal">
+                <img src="imagens/Sitio_2.jpg" alt="Foto 2">
+            </a>
+            <a href="imagens/Sitio_3.jpg" data-lightbox="galeria" data-title="Área verde">
+                <img src="imagens/Sitio_3.jpg" alt="Foto 3">
+            </a>
+            <a href="imagens/Sitio_4.jpg" data-lightbox="galeria" data-title="Proximidade UNASP-EC">
+                <img src="imagens/Sitio_4.jpg" alt="Foto 4">
+            </a>
+            <a href="imagens/Sitio_5.jpg" data-lightbox="galeria" data-title="Terreno e vizinhança">
+                <img src="imagens/Sitio_5.jpg" alt="Foto 5">
+            </a>
+            <a href="imagens/Sitio_6.jpg" data-lightbox="galeria" data-title="Vista geral do entorno">
+                <img src="imagens/Sitio_6.jpg" alt="Foto 6">
+            </a>
+            <a href="imagens/Sitio_7.jpg" data-lightbox="galeria" data-title="Detalhe do acesso asfaltado">
+                <img src="imagens/Sitio_7.jpg" alt="Foto 7">
+            </a>
+            <a href="imagens/Sitio_8.jpg" data-lightbox="galeria" data-title="Área para edificação">
+                <img src="imagens/Sitio_8.jpg" alt="Foto 8">
+            </a>
+        </div>
+    </section>
 
-  <section>
-    <h2>💰 Investimento Estratégico</h2>
-    <p class="highlight">R$ 890.685,00 por 27.833 m²</p>
-    <p>Excelente oportunidade por se tratar de divisão de herança. Valor abaixo da média regional.</p>
-    <p>Ideal para construir uma residência ampla, reservar parte para valorização ou empreender com moradia estudantil.</p>
-    <img src="tabela_comparativa.png" alt="Tabela comparativa de preços por m² na região">
-  </section>
+    <section>
+        <h2>Vídeo do UNASP-EC</h2>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/H9aC4LuC2xo" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    </section>
 
-  <section>
-    <h2>🌿 Natureza e Qualidade de Vida</h2>
-    <p>Contato direto com a natureza, espaço arborizado e ideal para vida tranquila ou projetos sustentáveis.</p>
-    <img src="Sitio_Gazeta_01.png" alt="Vista aérea do sítio">
-  </section>
+    <section>
+        <h2>Contato</h2>
+        <p>
+            <a href="https://wa.me/5519999350101?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Sítio%20Gazeta." target="_blank" style="font-size: 18px; font-weight: bold;">📞 Fale Conosco pelo WhatsApp!</a>
+        </p>
+    </section>
 
-  <section>
-    <h2>🛋️ Potenciais de Uso</h2>
-    <div class="two-columns">
-      <ul>
-        <li>🏠 Residência familiar</li>
-        <li>🏘️ Loteamento ou condomínio</li>
-      </ul>
-      <ul>
-        <li>🏢 Apartamentos para estudantes</li>
-        <li>🌿 Espaço para eventos, retiros ou ecoturismo</li>
-      </ul>
-    </div>
-  </section>
+    <footer>
+        © 2025 Sítio Gazeta. Todos os direitos reservados.
+    </footer>
 
-  <section>
-    <h2>📍 Veja no Mapa</h2>
-    <a class="cta-button" href="https://goo.gl/maps/RbM6oFmCPw3aD8Nc6" target="_blank">📍 Ver Localização no Google Maps</a>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2875.1579574429174!2d-47.155694399999994!3d-22.491194399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDI5JzI4LjMiUyA0N8KwMDknMjAuNSJX!5e1!3m2!1spt-BR!2sbr!4v1739985019370!5m2!1spt-BR!2sbr" allowfullscreen loading="lazy"></iframe>
-  </section>
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-  <section>
-    <h2>📞 Entre em Contato</h2>
-    <a class="cta-button" href="https://wa.me/5519999350101?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20terreno!" target="_blank">💬 Fale agora no WhatsApp</a>
-    <p><strong>E-mail:</strong> wygazeta@gmail.com</p>
-  </section>
 </body>
 </html>
+"""
+
+# Salvar o arquivo index.html atualizado
+index_file_path = '/mnt/data/index.html'
+with open(index_file_path, "w", encoding="utf-8") as f:
+    f.write(index_html_content)
+
+index_file_path  # Retornar o caminho para download
+

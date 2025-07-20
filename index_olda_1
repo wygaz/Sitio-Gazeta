@@ -132,6 +132,7 @@
   <section id="localizacao">
     <h2>Localização</h2>
     <p>Ao lado do UNASP-EC, em Engenheiro Coelho/SP. Área de 27.833m² com acesso facilitado.</p>
+
   </section>
 
   <section id="video">
@@ -162,9 +163,17 @@
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li class="glide__slide"><img src="imagens/sitio1.jpg" loading="lazy" alt="Vista aérea do sítio"></li>
-          <li class="glide__slide"><img src="imagens/sitio2.jpg" loading="lazy" alt="Vegetação"></li>
-          <li class="glide__slide"><img src="imagens/sitio3.jpg" loading="lazy" alt="Trilha interna"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_X_Cidade_Universitaria_Unasp_EC.png" loading="lazy" alt="Vista aérea do sítio"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Vegetacao_1.png" loading="lazy" alt="Vegetação"></li>
+          <li class="glide__slide"><img src="imagens/sitio_Gazeta_Proximidades_1.jpg" loading="lazy" alt="Proximidades"></li>
+          <li class="glide__slide"><img src="imagens/Vista_Unasp_e_Vizinhanca_1.jpg" loading="lazy" alt="vizinhança"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_2.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_1.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_2.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_1.jpg" loading="lazy" alt="Arredores do Sitio Gazetaa"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_arredores_e_legendas.png" loading="lazy" alt="Arredores do Sitio Gazeta Com Legenda"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Acesso_asfaltado_3.jpg" loading="lazy" alt="Acesso ao Sitio Gazeta Asfaltado"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_2.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
         </ul>
       </div>
       <div data-glide-el="controls">
