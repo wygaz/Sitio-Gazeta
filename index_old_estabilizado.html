@@ -1,0 +1,292 @@
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+  }
+
+  nav {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .glide {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .glide__slide img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    background-color: #ffffff;
+  }
+
+  .glide__slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .glide__slides {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .glide__track {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glide__arrows {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  .glide__arrow {
+    background: #1b4332;
+    color: white;
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1001;
+    pointer-events: all;
+  }
+
+  .glide__arrow:hover {
+    background: #2d6a4f;
+  }
+
+  .glide__bullet,
+  .glide__bullet:hover,
+  .glide__bullet:focus {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .glide__bullet:hover,
+  .glide__bullet:focus {
+    background: #40916c;
+  }
+
+  .glide__bullet.glide__bullet--active {
+    background: #2d6a4f;
+  }
+
+  .glide__bullets {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    display: flex;
+    gap: 8px;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+  }
+
+  .video-section, .location-section, .pricing-section, .cta-section, .contact-section {
+    max-width: 960px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .video-section p, .location-section p, .cta-section p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+
+  .video-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .location-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: zoom-in;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  th {
+    background-color: #2d6a4f;
+    color: white;
+  }
+
+  button.reveal-btn {
+    padding: 0.5rem 1rem;
+    background-color: #40916c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button.reveal-btn:hover {
+    background-color: #1b4332;
+  }
+
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-buttons a {
+    padding: 0.75rem 1.5rem;
+    background-color: #2d6a4f;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+
+<nav>
+  🌿 Sítio Gazeta - Natureza ao lado do UNASP-EC
+  <nav>
+  <a href="#localizacao">Localização</a>
+  <a href="#carrossel">Galeria</a>
+  <a href="#video">Vídeo</a>
+  <a href="#comparativo">Comparativo</a>
+  <a href="#decisao">Oferta</a>
+</nav>
+
+<section class="location-section" id="localizacao">
+  <h2>Localização Estratégica</h2>
+  <p>Ao lado do UNASP-EC, com acesso facilitado e natureza exuberante.</p>
+  <img src="imagens/Sitio_arredores_e_legendas.png" alt="Mapa do Sítio Gazeta">
+</section>
+</nav>
+
+<!-- Carrossel GlideJS permanece aqui -->
+
+<section class="video-section" id="video">
+  <h2>Apresentação em Vídeo</h2>
+  <p><p>Conheça o UNASP-EC, uma universidade advea, baseada em uma filosofia de educação cristã com mais de 30 cursos oferecidos, incluindo Direito, Comunicação Social, Rádio e TV, Administração, Veterinária , Três áreas de Engenharia, além de ser o maior internato adventista do Globo, que inclui também, o curso de Medicina em um dos seus "</p>
+  <div class="video-responsive">
+    <iframe src="https://www.youtube.com/embed/H9aC4LuC2xo" frameborder="0" allowfullscreen loading="lazy"></iframe>
+  </div>
+</section>
+
+<section class="pricing-section" id="comparativo">
+  <h2>Tabela Comparativa</h2>
+  <p>Compare com valores praticados nos condomínios ao redor do UNASP-EC:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>nº</th>
+        <th>Localização</th>
+        <th>m²</th>
+        <th>Valor Total</th>
+        <th>Valor por m²</th>
+        <th>Valor proporcional<br>para 27.833,92m²</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Sítio Gazeta</td><td>27.833</td><td>R$ 890.650,00</td><td>R$ 32,00</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 890.685,44')">Mostrar</button></td></tr>
+      <tr><td>2</td><td>Recanto Tropical</td><td>300</td><td>R$ 100.000,00</td><td>R$ 333,33</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 9.277.893,74')">Mostrar</button></td></tr>
+      <tr><td>3</td><td>Cidade Universitária</td><td>385</td><td>R$ 110.000,00</td><td>R$ 285,71</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 7.944.532,39')">Mostrar</button></td></tr>
+      <tr><td>4</td><td>Lagoa Bonita</td><td>600</td><td>R$ 300.000,00</td><td>R$ 500,00</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 13.916.960,00')">Mostrar</button></td></tr>
+      <tr><td>5</td><td>Sparta Park</td><td>300</td><td>R$ 150.000,00</td><td>R$ 500,00</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 13.916.960,00')">Mostrar</button></td></tr>
+      <tr><td>6</td><td>Portal do Lago</td><td>1.000</td><td>R$ 340.000,00</td><td>R$ 340,00</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 9.464.532,80')">Mostrar</button></td></tr>
+      <tr><td>7</td><td>Lago Azul</td><td>506</td><td>R$ 250.000,00</td><td>R$ 494,07</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 13.753.993,12')">Mostrar</button></td></tr>
+      <tr><td>8</td><td>Recanto dos Pássaros</td><td>600</td><td>R$ 170.000,00</td><td>R$ 283,33</td><td><button class="reveal-btn" onclick="reveal(this, 'R$ 7.888.772,18')">Mostrar</button></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="cta-section" id="decisao">
+  <h2>Por que esta é uma oportunidade única?</h2>
+  <p>Com seus 27.833m², o Sítio Gazeta está avaliado em apenas R$ 32,00 por m², porque trata-se de uma área integral, ainda não dividida — valor significativamente abaixo dos praticados na região, que superam facilmente os R$ 333,33 por m² do condomínio extamente ao lado desse terreno, o Recanto Tropical.</p>
+  <p>Se fosse vendido pelo menor valor de referência da região (R$ 283,33), o terreno custaria aproximadamente <strong>R$ 7.888.772,18</strong>!</p>
+  <p>Não perca essa chance única de adquirir uma área privilegiada, ao lado do UNASP-EC, por um valor muito abaixo do mercado.</p>
+</section>
+
+<section class="contact-section" id="contato">
+  <h2>Entre em Contato</h2>
+  <p>Vamos conversar? Clique em um dos botões abaixo:</p>
+  <div class="contact-buttons">
+    <a href="mailto:wygazeta@gmail.com">📧 Enviar E-mail</a>
+    <span>wygazeta@gmail.com</span>
+    <a href="https://wa.me/5519999350101" target="_blank">📱 WhatsApp</a>
+    <span>(19) 99935-0101</span>
+  </div>
+</section>
+
+<script>
+  function reveal(button, value) {
+    button.outerHTML = `<span><strong>${value}</strong></span>`;
+  }
+</script>

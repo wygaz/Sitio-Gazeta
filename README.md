@@ -58,3 +58,4 @@ Focado em proporcionar uma experiência rápida e objetiva para o interessado, c
 Se tiver interesse ou desejar mais informações:
 
 [**📞 Clique aqui para falar no WhatsApp**](https://wa.me/5519999350101?text=Olá!%20Vi%20o%20anúncio%20do%20Sítio%20Gazeta%20e%20gostaria%20de%20saber%20mais%20detalhes.)
+git add .

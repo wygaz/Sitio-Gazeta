@@ -1,294 +1,283 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <link rel="icon" href="/imagens/favicon.ico" type="image/x-icon">
-  <meta name="theme-color" content="#2d6a4f">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="/imagens/icon-192.png">
-
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sítio Gazeta - Natureza ao lado do UNASP</title>
-  <meta name="description" content="Terreno de 27.833m² ao lado do UNASP-EC. Excelente oportunidade de investimento e contato com a natureza.">
-  <meta name="keywords" content="sítio, UNASP, Engenheiro Coelho, terreno, investimento, natureza">
-  <meta name="author" content="Sítio Gazeta">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sítio Gazeta - Natureza ao lado do UNASP">
-  <meta property="og:description" content="Conheça esta oportunidade única: um terreno ao lado do UNASP-EC.">
-  <meta property="og:image" content="https://www.suapagina.com/imagens/preview.jpg">
-  <meta property="og:url" content="https://www.suapagina.com">
-  <meta property="og:type" content="website">
-  <!-- Fonts & CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
-  <!-- GlideJS Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css">
+  <title>Sítio Gazeta - Natureza ao lado do UNASP-EC</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      background-color: #eef5fa;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      color: #2c3e50;
+      font-family: sans-serif;
     }
-    header {
-      background: #2d6a4f;
-      color: white;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header > nav {
-      max-width: 960px;
-      margin: 0 auto;
-    }
+
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: #d4e9f2;
+      padding: 12px 24px;
+      font-weight: bold;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
     }
+
     nav a {
-      color: white;
-      margin-left: 1rem;
+      margin: 0 12px;
       text-decoration: none;
-      font-weight: 600;
+      color: #333;
     }
-    section {
-      padding: 3rem 1.5rem;
+
+    nav a.icon-email::before {
+      content: "\2709";
+      margin-right: 6px;
+      font-size: 20px;
+      color: #007bff;
+    }
+
+    nav a.icon-whatsapp::before {
+      content: "\1F4AC";
+      margin-right: 6px;
+      font-size: 20px;
+      color: #25d366;
+    }
+
+    .content-container {
       max-width: 960px;
       margin: auto;
-      opacity: 1;
-      transform: none;
+      padding-top: 60px; /* compensacao para nav fixo */
     }
-    section.reveal {
-      /* Removido temporariamente */
+
+    section {
+      padding: 40px 20px;
     }
-    h1, h2 {
-      color: #1b4332;
+
+    section:nth-of-type(odd) {
+      background-color: #f9f9f9;
+    }
+
+    section:nth-of-type(even) {
+      background-color: #ffffff;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .pricing-section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    .pricing-section th,
+    .pricing-section td {
+      border: 1px solid #ddd;
+      padding: 8px;
       text-align: center;
     }
-    .cta {
-      background: #40916c;
+
+    .pricing-section tr:nth-child(2) {
+      background-color: #ffffcc;
+      font-weight: bold;
+    }
+
+    .pricing-section td:nth-child(5),
+    .pricing-section th:nth-child(5) {
+      background-color: #ffffcc;
+    }
+
+    .reveal-btn {
+      background-color: #4CAF50;
       color: white;
       border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      margin-top: 1rem;
-      border-radius: 8px;
+      padding: 6px 12px;
       cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .cta:hover {
-      background: #2d6a4f;
-      transform: scale(1.05);
-    }
-    .glide__slide img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    footer {
-      background: #081c15;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
       border-radius: 4px;
     }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-    .glide__bullet {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ccc;
-    border: none;
-    margin: 0 5px;
-    display: inline-block;
-    transition: background 0.3s;
-    cursor: pointer;
-    }
-    .glide__bullet:hover,
-    .glide__bullet:focus {
-        background: #40916c;
-    }
-    .glide__bullet.glide__bullet--active {
-        background: #2d6a4f;
+
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 16px;
+      margin: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .gallery .slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #1b4332;
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    z-index: 10;
+    .contact-buttons span {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      text-align: center;
+      color: #333;
     }
-    .gallery .prev-btn {
-    left: 10px;
+
+    .glide__slide img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: contain;
     }
-    .gallery .next-btn {
-    right: 10px;
+
+    .glide__arrows {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
     }
-</style>
+
+    .glide__arrow {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .glide__bullets {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 20px;
+      bottom: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .glide__bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+    }
+
+    .glide__bullet--active {
+      background-color: #333;
+    }
+
+    .map-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      max-width: 960px;
+      height: 450px;
+      border: none;
+    }
+
+    .destaque-inicial {
+        background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+        padding: 2rem 1rem;
+        text-align: center;
+        border-bottom: 2px solid #c8e6c9;
+    }
+
+    .destaque-inicial h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #2e7d32;
+        margin-bottom: 0.5rem;
+    }
+
+    .destaque-inicial h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #00796b;
+        margin-bottom: 1rem;
+    }
+
+    .destaque-inicial ul {
+        list-style: none;
+        padding: 0;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .destaque-inicial li {
+        margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 576px) {
+    .destaque-inicial h1 {
+        font-size: 1.4rem;
+        }
+
+    .destaque-inicial h2 {
+        font-size: 1.2rem;
+        }
+    
+    .destaque-inicial ul {
+        font-size: 1rem;
+        }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-        <div><strong>Sítio Gazeta</strong></div>
-        <div>
-            <a href="#localizacao">Localização</a>
-            <a href="#video">Vídeo</a>
-            <a href="#investimento">Investimento</a>
-            <a href="#natureza">Natureza</a>
-            <a href="#comparativo">Comparativo</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#contato">Contato</a>
-        </div>
-        </nav>
-    </header>
+  <div class="content-container">
+    <nav>
+      <a href="#localizacao">Localização</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#video">Vídeo</a>
+      <a href="#comparativo">Comparativo</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#contato" class="icon-email">Email</a>
+      <a href="https://wa.me/5519999350101" class="icon-whatsapp">WhatsApp</a>
+    </nav>
+  </div>
 
-    <section id="localizacao">
-            <h2>Localização</h2>
-            <p>Ao lado do UNASP-EC, em Engenheiro Coelho/SP. Área de 27.833m² com acesso facilitado. O trajeto até o sítio é totalmente asfaltado, oferecendo conforto e praticidade até a porta da propriedade.</p>
-            <div style="text-align: center;">
-                <img src="imagens/Sitio_Gazeta_UNASP-EC_2.jpg" loading="lazy" alt="Proximidade do UNASP-EC 2" style="max-width: 100%; border-radius: 8px; margin-top: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                <p style="font-size: 0.95rem; color: #555; margin-top: 0.5rem;">Imagem da estrada asfaltada que leva até a entrada do Sítio Gazeta</p>
-            </div>
-    </section>
+<section id="localizacao">
+  <div style="text-align: center">
+    <h1>🏡 Oportunidade Única! Sítio ao Lado do UNASP-EC 🌿</h1>
+    <h2>📍 Localização Privilegiada</h2>
+    <ul>
+        <li>📌 Terreno de <strong>27.833 m²</strong> ao lado do UNASP – Engenheiro Coelho, a maior universidade adventista do mundo!</li>
+        <li>📌 Apenas <strong>800 metros</strong> do campus, com acesso asfaltado.</li>
+        <li>📌 <strong>200 metros</strong> do Bairro Cidade Universitária e <strong>500 metros</strong> do Residencial Lagoa Bonita.</li>
+    </ul> <br><br>
+    <img src="imagens/Sitio_Gazeta_UNASP-EC_2.jpg" alt="Mapa do Sítio Gazeta">
+  </div>  
+</section>
 
-    <session id="Video">
-        <p style="text-align: center; max-width: 700px; margin: 0 auto 1rem; font-size: 1.1rem; color: #444;">
-        Assista ao vídeo e descubra por que o Sítio Gazeta é uma oportunidade especial. Veja a localização estratégica, o entorno privilegiado e o potencial desta área ao lado do UNASP-EC. </p>
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/H9aC4LuC2xo" frameborder="0" allowfullscreen loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <section id="investimento">
-        <h2>Investimento</h2>
-        <p>O Sítio Gazeta é uma oportunidade única para quem busca investir com segurança e visão de futuro:</p>
-        <ul style="list-style: none; padding-left: 0;">
-                <li>✔️ Valor: <strong>R$ 32/m²</strong> × 27.833m² = <strong>R$ 890.656</strong></li>
-                <li>✔️ Localização privilegiada: ao lado do UNASP-EC</li>
-                <li>✔️ Área ampla e versátil para moradia, lazer ou empreendimentos</li>
-                <li>✔️ Acesso totalmente asfaltado</li>
-        </ul>
-    
-        <p><strong>Veja a tabela comparativa e comprove a vantagem do Sítio Gazeta.</strong></p>
-        <a href="https://wa.me/5519999350101?text=Olá!%20Tenho%20interesse%20no%20Sítio%20Gazeta." class="cta" target="_blank" rel="noopener noreferrer">
-        Fale pelo WhatsApp
-        </a>
-    </section>
-
-    <section id="natureza">
-        <h2>Natureza e Qualidade de Vida</h2>
-        <p>Área ampla com vegetação preservada. Ideal para moradia, lazer ou projetos sustentáveis.</p>
-    </section>
-
-    <section id="comparativo">
-            <h2>Comparativo</h2>
-            <p>Veja como o Sítio Gazeta se destaca em localização, metragem e valor frente aos terrenos nos residenciais da vizinhança.</p>
-            <div style="text-align: center;">
-                <img src="imagens/Tabela_Comparativa_1.png" style="border: 3px solid #1b4332; padding: 4px; background: #f8f9fa; border-radius: 8px; max-width: 100%;">
-                <p style="font-size: 0.95rem; color: #555; margin-top: 0.5rem;">Tabela comparativa entre o Sítio Gazeta e outras propriedades da região</p>
-            </div>
-            <div style="max-width:600px; margin: 2rem auto 0;">
-            <canvas id="graficoComparativo"></canvas>
-            </div>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('graficoComparativo').getContext('2d');
-        new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Sítio Gazeta', 'Recanto Tropical', 'Cidade Universitária', 'Lagoa Bonita', 'Sparta Park', 'Portal do Lago', 'Lago Azul', 'Recanto dos Pássaros'],
-            datasets: [{
-            label: 'Preço por m² (R$)',
-            data: [32, 333.33, 285.71, 500, 500, 340, 494.07, 283.33],
-            backgroundColor: ['#2d6a4f', '#40916c', '#52b788', '#74c69d', '#95d5b2', '#b7e4c7', '#d8f3dc', '#a3c4bc']
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-            legend: {
-                display: false
-            },
-            tooltip: {
-                callbacks: {
-                label: function(context) {
-                    return `R$ ${context.parsed.y.toFixed(2).replace('.', ',')} por m²`;
-                }
-                }
-            }
-            },
-            scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                display: true,
-                text: 'Preço (R$/m²)'
-                }
-            }
-            }
-        }
-        });
-    </script>
-
-  <!-- Galeria de Fotos -->
-    <section id="galeria" class="gallery">
-    <h2>Galeria de Fotos</h2>
-    <div class="glide" style="position: relative; max-width: 960px; margin: auto;">
-        <div class="glide__track" data-glide-el="track">
+  <section id="galeria">
+    <h2>Galeria de Imagens</h2>
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-            <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_1.jpg" alt="Arredores do Sítio 1"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_Vegetacao_1.png" alt="Vegetação exuberante"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_Residenciais_Vizinhos.jpg" alt="Residenciais vizinhos"></li>
-            <li class="glide__slide"><img src="imagens/Vista_Unasp_e_Vizinhanca_1.jpg" alt="Vista UNASP-EC e vizinhança"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_2.jpg" alt="Proximidade do UNASP-EC 2"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_Arredores_2.jpg" alt="Proximidade do UNASP-EC 1"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_Arredores_3.jpg" alt="Arredores do Sítio Gazeta 2"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_Arredores_1.jpg" alt="Arredores do Sítio Gazeta 1"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_arredores_e_legendas.png" alt="Arredores com legenda"></li>
-            <li class="glide__slide"><img src="imagens/Sitio_Acesso_asfaltado_3.jpg" alt="Acesso asfaltado"></li>
-            <li class="glide__slide"><img src="imagens/Portaria_do_UNASP-EC.png" alt="Portaria UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_residenciais_vizinhos.jpg" loading="lazy" alt="Vista aérea do sítio"></li>
+          <li class="glide__slide"><img src="imagens/Vista_aerea_perto.jpg" loading="lazy" alt="Vegetação"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_2.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_1.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_2.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_1.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_arredores_e_legendas.png" loading="lazy" alt="Arredores do Sitio Gazeta com legenda"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Acesso_asfaltado_3.jpg" loading="lazy" alt="Acesso ao Sitio Gazeta asfaltado"></li>
+          <li class="glide__slide"><img src="imagens/Portaria_do_UNASP-EC.png" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
         </ul>
-        </div>
-
-        <!-- Botões de navegação -->
-        <div data-glide-el="controls">
-        <button class="slider-nav prev-btn" data-glide-dir="<">«</button>
-        <button class="slider-nav next-btn" data-glide-dir=">">»</button>
-        </div>
-
-        <!-- Indicadores de progresso -->
-        <div class="glide__bullets" data-glide-el="controls[nav]">
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">«</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">»</button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
         <button class="glide__bullet" data-glide-dir="=0"></button>
         <button class="glide__bullet" data-glide-dir="=1"></button>
         <button class="glide__bullet" data-glide-dir="=2"></button>
@@ -298,24 +287,53 @@
         <button class="glide__bullet" data-glide-dir="=6"></button>
         <button class="glide__bullet" data-glide-dir="=7"></button>
         <button class="glide__bullet" data-glide-dir="=8"></button>
-        <button class="glide__bullet" data-glide-dir="=9"></button>
-        <button class="glide__bullet" data-glide-dir="=10"></button>
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
-    <!-- Scripts do GlideJS -->
-    <script>
-       document.addEventListener('DOMContentLoaded', function () {
-       new Glide('.glide', {
-       type: 'carousel',
-       startAt: 0,
-       perView: 1,
-       autoplay: 4000,
-       hoverpause: true,
-       animationDuration: 800
-       }).mount();
-       });
-    </script>
+  <section id="video">
+    <h2>Assista ao Vídeo</h2>
+    <div style = "text-align: center; font-size: 20px;">A localização dessa área é privlegiada. Fica ao lado da maior Universidade Adventista do mundo, UNASP-EC,<br>
+       Campus de Engenheiro Coelho - SP. Trata-se de uma escola de nivel internacional, que abriga estudantes de quase 30 países de todos os continentes, e que oferece cursos oficiais do pré-primário até medicina, por volta de 30 cursos universitários e dezenas de pós-graduação, incluindo mestrado e doutorado.<br><br>
+      <h2>Veja o video e você vai entender por que os jovens se apaixonam pelo UNASP-EC.</h2></div>
+    <div style="text-align: center;">
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/H9aC4LuC2xo" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="comparativo" class="pricing-section">
+    <h2>Tabela Comparativa</h2>
+    <p style="text-align: center;font-size: 20px">Compare com valores de terrenos semelhantes ao redor do UNASP-EC.</p>
+    <img src="imagens/Tabela_Comparativa_1.png" alt="Tabela Comparativa com destaques" style="display:block; margin:auto; max-width:100%;">
+  </section>
+
+  <section id="oferta">
+    <h2>Oferta Especial</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center; font-size: 18px;">
+      Uma oportunidade única ao lado do UNASP-EC! O Sítio Gazeta, com área total de 27.833,92 m², o que equivale a mais de um quarteirão de qualquer condomínio adjacente, é oferecido por apenas R$ 890.650,00 – o equivalente a apenas R$ 32,00 por metro quadrado, por tratar-se de inventário e divisão de herança.<br><br>
+      Trata-se de um terreno com documentação completa, incluindo levantamento topográfico georreferenciado, junto ao INCRA<br><br>
+      Sua localização estratégica e a natureza exuberante ao redor tornam o Sítio Gazeta um investimento singular, com alto potencial de valorização. <br><br>
+      Veja abaixo o comparativo com os valores dos terrenos vizinhos:
+    </p>
+    <img src="imagens/Investimento4.jpg" alt="Comparativo de valores por m²" style="display:block; margin: 30px auto 0; max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <div class="contact-buttons" style="text-align: center;">
+      <a href="mailto:wygazeta@gmail.com">Enviar e-mail<br><span>wygazeta@gmail.com</span></a>
+      <a href="https://wa.me/5519999350101" target="_blank">WhatsApp<br><span>(19) 99935-0101</span></a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+  <script>
+    new Glide('.glide', {
+      type: 'carousel',
+      autoplay: 4000,
+      hoverpause: true,
+      animationDuration: 800
+    }).mount();
+  </script>
 </body>
 </html>

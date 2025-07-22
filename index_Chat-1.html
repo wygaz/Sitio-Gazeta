@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sítio Gazeta - Natureza ao lado do UNASP-EC</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <style>
+    body {
+      background-color: #eef5fa;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    nav {
+      background: #d4e9f2;
+      padding: 12px 24px;
+      font-weight: bold;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav, .content-container {
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    section:nth-of-type(odd) {
+      background-color: #f9f9f9;
+    }
+
+    section:nth-of-type(even) {
+      background-color: #ffffff;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .pricing-section table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    .pricing-section th,
+    .pricing-section td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .pricing-section tr:nth-child(2) {
+      background-color: #ffffcc;
+      font-weight: bold;
+    }
+
+    .pricing-section td:nth-child(5),
+    .pricing-section th:nth-child(5) {
+      background-color: #ffffcc;
+    }
+
+    .reveal-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 16px;
+      margin: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-buttons span {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      text-align: center;
+      color: #333;
+    }
+
+    .glide__slide img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: contain;
+    }
+
+    .glide__arrows {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 10px;
+    }
+
+    .glide__arrow {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .glide__bullets {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .glide__bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+    }
+
+    .glide__bullet--active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-container">
+    <nav>
+      <a href="#localizacao">Localização</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#video">Vídeo</a>
+      <a href="#comparativo">Comparativo</a>
+      <a href="#oferta">Oferta</a>
+    </nav>
+  </div>
+
+  <section id="localizacao">
+    <h1>Localização Estratégica</h1>
+    <p style="text-align:center; font-size:18px">A localização dessa área é privilegiada. Fica ao lado da maior Universidade Adventista do mundo, UNASP-EC, Campus de Engenheiro Coelho - SP.</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.411284943739!2d-47.21791882477179!3d-22.824361034576736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c88d6bcd81c71f%3A0xdf395245c73cf536!2sUNASP%20-%20Centro%20Universit%C3%A1rio%20Adventista%20de%20S%C3%A3o%20Paulo%20(Campus%20Engenheiro%20Coelho)!5e0!3m2!1spt-BR!2sbr!4v1721470964154!5m2!1spt-BR!2sbr" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  
+  <section id="galeria">
+    <h2>Galeria de Imagens</h2>
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide"><img src="imagens/Sitio_residenciais_vizinhos.jpg" loading="lazy" alt="Vista aérea do sítio"></li>
+          <li class="glide__slide"><img src="imagens/Vista_aerea_perto.jpg" loading="lazy" alt="Vegetação"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_2.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Gazeta_UNASP-EC_1.jpg" loading="lazy" alt="Proximidade do UNASP-EC"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_2.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Arredores_1.jpg" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_arredores_e_legendas.png" loading="lazy" alt="Arredores do Sitio Gazeta com legenda"></li>
+          <li class="glide__slide"><img src="imagens/Sitio_Acesso_asfaltado_3.jpg" loading="lazy" alt="Acesso ao Sitio Gazeta asfaltado"></li>
+          <li class="glide__slide"><img src="imagens/Portaria_do_UNASP-EC.png" loading="lazy" alt="Arredores do Sitio Gazeta"></li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">«</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">»</button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+        <button class="glide__bullet" data-glide-dir="=4"></button>
+        <button class="glide__bullet" data-glide-dir="=5"></button>
+        <button class="glide__bullet" data-glide-dir="=6"></button>
+        <button class="glide__bullet" data-glide-dir="=7"></button>
+        <button class="glide__bullet" data-glide-dir="=8"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Assista ao Vídeo</h2>
+    <div style = "text-align: center; font-size: 20px;">A localização dessa área é privlegiada. Fica ao lado da maior Universidade Adventista do mundo, UNASP-EC,<br>
+       Campus de Engenheiro Coelho - SP. Trata-se de uma escola de nivel internacional, que abriga estudantes de quase 30 países de todos os continentes, e que oferece cursos oficiais do pré-primário até medicina, por volta de 30 cursos universitários e dezenas de pós-graduação, incluindo mestrado e doutorado.<br><br>
+      <h2>Veja o video e você vai entender por que os jovens se apaixonam pelo UNASP-EC.</h2></div>
+    <div style="text-align: center;">
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/H9aC4LuC2xo" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="comparativo" class="pricing-section">
+    <h2>Tabela Comparativa</h2>
+    <p style="text-align: center;">Compare com valores de terrenos semelhantes ao redor do UNASP-EC.</p>
+    <img src="imagens/Tabela_Comparativa_1.png" alt="Tabela Comparativa com destaques" style="display:block; margin:auto; max-width:100%;">
+  </section>
+
+  <section id="oferta">
+    <h2>Oferta Especial</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center; font-size: 18px;">
+      Uma oportunidade única ao lado do UNASP-EC! O Sítio Gazeta, com área total de 27.833,92 m², o que equivale a mais de um quarteirão de qualquer condomínio adjacente, é oferecido por apenas R$ 890.650,00 – o equivalente a apenas R$ 32,00 por metro quadrado, por tratar-se de inventário e divisão de herança.<br><br>
+      Trata-se de um terreno com documentação completa, incluindo levantamento topográfico georreferenciado, junto ao INCRA<br><br>
+      Sua localização estratégica e a natureza exuberante ao redor tornam o Sítio Gazeta um investimento singular, com alto potencial de valorização. <br><br>
+      Veja abaixo o comparativo com os valores dos terrenos vizinhos:
+    </p>
+    <img src="imagens/Investimento4.jpg" alt="Comparativo de valores por m²" style="display:block; margin: 30px auto 0; max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <div class="contact-buttons" style="text-align: center;">
+      <a href="mailto:wygazeta@gmail.com">Enviar e-mail<br><span>wygazeta@gmail.com</span></a>
+      <a href="https://wa.me/5519999350101" target="_blank">WhatsApp<br><span>(19) 99935-0101</span></a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+  <script>
+    new Glide('.glide', {
+      type: 'carousel',
+      autoplay: 4000,
+      hoverpause: true,
+      animationDuration: 800
+    }).mount();
+  </script>
+</body>
+</html>
