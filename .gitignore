@@ -22,3 +22,6 @@ Dados/
 *.mov
 *.mp3
 *.wav
+
+/Folhetos_e_pecas/
+*.zip
